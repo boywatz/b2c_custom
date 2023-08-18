@@ -1092,13 +1092,14 @@
     <script>
       $(document).ready(function () {
         setTimeout(function () {
+          const isConfirmPage = $('#countryCode_label').length;
+
           $('select#countryCode').val('TH');
 
-          if ($('#countryCode_label').length) {
-            //if confirm page
+          if (isConfirmPage) {
             $('#continue').click();
           }
-        }, 100);
+        }, 50);
       });
     </script>
   </head>
