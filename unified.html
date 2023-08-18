@@ -665,7 +665,52 @@
         </div>
     </div>
     <script>
-      $("#phoneNumber").attr("placeholder", "โปรดระบุเบอร์โทรศัพท์");
+        $( "div.error.itemLevel").addClass("table-error")
+        
+        var validateElement =  $( "div.error.itemLevel").detach()      
+        
+        $( ".entry-item" ).append("<div class=\"input-group\"></div>")
+        $( ".input-group" ).append(validateElement)
+        $( ".input-group" ).append("<span class=\"input-group-addon\" id=\"basic-addon1\">+66</span>")
+       
+        $( "#phoneNumber" ).addClass("form-control")
+        $( "#phoneNumber" ).appendTo( $( ".entry-item .input-group" ) )
+        $("#phoneNumber").attr("placeholder", "088 123 4567");
+
+         $(document).ready(function () {
+            $('#next').prop('ariaDisabled', true);
+
+            $('#phoneNumber').on("input",function () {
+                var strLen = $(this).val().length;
+                if (strLen >= 10) { 
+                    $('#next').prop('ariaDisabled', false);
+                    $('#next').css({'color': '#fff',  'background-color': '#E53E41'});
+                }
+                else{
+                    $('#next').prop('ariaDisabled', true);
+                    $('#next').css({'color': '#BBBBBB',  'background-color': '#696969'});
+                    $(".pageLevel").prop("style", "display:none");
+                    $("div.error.itemLevel").prop("style", "display:block");
+                    $( ".input-group" ).append(validateElement);
+                }
+            })
+
+            const continueButton = document.getElementById("next");
+            continueButton.addEventListener("click", function() {
+
+                if ($('.pageLevel').attr('aria-hidden') == 'false') {
+                    $( "div.error.itemLevel").css({'opacity': 0});
+                };
+            
+            var errorItem = $( "div.error.itemLevel").detach();
+                setTimeout(function() {
+                    var errorItem = $( "div.error.itemLevel").detach();
+                    if ($('.pageLevel').attr('aria-hidden') == 'true') {
+                        $( ".input-group" ).append(validateElement)
+                    }
+                }, 800);
+            });
+        });
     </script>
 </body>
 </html>
