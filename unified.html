@@ -1178,6 +1178,16 @@
       }
       /* endinject */
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $('#replace').append('test replace');
+          $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
+        }, 800);
+      });
+    </script>
   </head>
   <body>
     <div
@@ -1209,13 +1219,5 @@
         </div>
       </div>
     </div>
-    <script>
-      $(document).ready(function () {
-        setTimeout(function () {
-          $('#replace').append('test replace');
-          $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
-        }, 800);
-      });
-    </script>
   </body>
 </html>
