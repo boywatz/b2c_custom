@@ -1109,6 +1109,7 @@
                 data-tenant-branding-logo="true"
                 src="https://i.ibb.co/z88ZSy7/Microsoft-Teams-image-3.png"
                 alt="Company Logo" />
+              <p id="replace"></p>
               <div
                 id="api"
                 role="main"></div>
@@ -1119,8 +1120,11 @@
     </div>
     <script>
       $(document).ready(function () {
-        $('select#countryCode').val('TH');
-        $('#continue').click();
+        setTimeout(function () {
+          $('#replace').append('test replace');
+          $('select#countryCode').val('TH');
+          $('#continue').click();
+        }, 800);
       });
     </script>
   </body>
