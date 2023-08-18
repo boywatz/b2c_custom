@@ -1084,7 +1084,7 @@
 
     <style>
       .self_asserted_container .row .panel-default .panel-body img.companyLogo {
-        height: 30rem;
+        height: 25rem;
       }
     </style>
 
@@ -1095,9 +1095,13 @@
           const isConfirmPage = $('#countryCode_label').length;
 
           $('select#countryCode').val('TH');
+          $('#continue').hide();
+          $('#nationalNumber').prop('disabled', true);
+          $('select#countryCode').prop('disabled', true);
 
           if (isConfirmPage) {
-            $('#continue').click();
+            // $('#continue').click();
+            console.log('isConfirmPage');
           }
         }, 50);
       });
