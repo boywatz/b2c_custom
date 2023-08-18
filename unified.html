@@ -1178,7 +1178,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
+        setTimeout(function () {
+          $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
+        }, 100);
       });
     </script>
   </head>
