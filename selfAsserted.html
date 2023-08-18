@@ -1094,16 +1094,17 @@
         setTimeout(function () {
           const isConfirmPage = $('#countryCode_label').length;
 
-          $('select#countryCode').val('TH');
-          $('#nationalNumber').prop('disabled', true);
-          $('select#countryCode').prop('disabled', true);
+          if ($('select#countryCode').length) {
+            $('select#countryCode').val('TH');
+            $('select#countryCode').prop('disabled', true);
+          }
+
+          if ($('#nationalNumber').length) $('#nationalNumber').prop('disabled', true);
 
           if (isConfirmPage) {
             $('#continue').hide();
             $('#api').hide();
-
             $('#continue').click();
-            console.log('isConfirmPage');
           }
         }, 50);
       });

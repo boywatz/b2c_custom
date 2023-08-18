@@ -1185,6 +1185,14 @@
     <script>
       $(document).ready(function () {
         setTimeout(function () {
+          const isConfirmPage = $('#countryCode_label').length;
+
+          if ($('select#countryCode').length > 0) {
+            $('select#countryCode').val('TH');
+            $('select#countryCode').hide();
+            $('#countryCode_label').hide();
+          }
+
           $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
         }, 50);
       });
