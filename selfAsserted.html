@@ -1093,7 +1093,11 @@
       $(document).ready(function () {
         setTimeout(function () {
           $('select#countryCode').val('TH');
-          $('#continue').click();
+
+          if ($('#countryCode_label').length) {
+            //if confirm page
+            $('#continue').click();
+          }
         }, 100);
       });
     </script>
