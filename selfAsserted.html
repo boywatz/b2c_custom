@@ -1118,9 +1118,10 @@
       </div>
     </div>
     <script>
-      $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
-      $('select#countryCode').val('TH');
-      $('#continue').click();
+      $(document).ready(function () {
+        $('select#countryCode').val('TH');
+        $('#continue').click();
+      });
     </script>
   </body>
 </html>
