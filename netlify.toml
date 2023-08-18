@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "https://sansiriconb2c.b2clogin.com"
+  to = "https://stunning-sunburst-7435bf.netlify.app/unified.html"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
