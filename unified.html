@@ -1182,10 +1182,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        setTimeout(function () {
-          $('#replace').append('test replace');
-          $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
-        }, 800);
+        $('#phoneNumber').attr('placeholder', 'โปรดระบุเบอร์โทรศัพท์');
       });
     </script>
   </head>
@@ -1210,7 +1207,6 @@
                 data-tenant-branding-logo="true"
                 src="https://i.ibb.co/z88ZSy7/Microsoft-Teams-image-3.png"
                 alt="Company Logo" />
-              <p id="replace"></p>
               <div
                 id="api"
                 role="main"></div>
