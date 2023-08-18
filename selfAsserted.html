@@ -1095,11 +1095,13 @@
           const isConfirmPage = $('#countryCode_label').length;
 
           $('select#countryCode').val('TH');
-          $('#continue').hide();
           $('#nationalNumber').prop('disabled', true);
           $('select#countryCode').prop('disabled', true);
 
           if (isConfirmPage) {
+            $('#continue').hide();
+            $('#api').hide();
+
             // $('#continue').click();
             console.log('isConfirmPage');
           }
